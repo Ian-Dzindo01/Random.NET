@@ -30,4 +30,42 @@ app.MapPost("api/todo", async(AppDbContext context, ToDo toDo) =>
 
 });
 
+// UPDATE Endpoint
+app.MapPut("api/todo/{id}", async (AppDbContext context, int id, ToDo toDo) => {
+
+    var toDoModel = await context.ToDos.FirstOrDefaultAsync(t => t.Id == id);
+
+    if (toDoModel == null)
+    {
+        return Results.NotFound();
+    }
+
+    toDoModel.ToDoName = toDo.ToDoName;
+
+    await context.SaveChangesAsync();
+
+    return Results.NoContent();
+
+});
+
+// DELETE endpoint
+app.MapDelete("api/todo/{id}", async (AppDbContext context, int id, ToDo toDo) => {
+
+    var toDoModel = await context.ToDos.FirstOrDefaultAsync(t => t.Id == id);
+
+    if (toDoModel == null)
+    {
+        return Results.NotFound();
+    }
+
+    context.ToDos.Remove(toDoModel);
+
+    await context.SaveChangesAsync();
+
+    return Results.NoContent();
+});
+
+
+
+
 app.Run();
