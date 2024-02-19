@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "CrxmCIcBpOBl1rdfzJRCgfBi7MqaNp1iZ8wcty0HkG2d6/h7PbNeRanQD8JIwbgac8p7wsmp5eDyvPVMylKbxw==",
+  "success": true,
+  "projectFilePath": "/home/iandzindo/Desktop/Projects/NETProject/HabitLogger/HabitLogger/HabitLogger.csproj",
+  "expectedPackageFiles": [
+    "/home/iandzindo/.nuget/packages/microsoft.data.sqlite/9.0.0-preview.1.24081.2/microsoft.data.sqlite.9.0.0-preview.1.24081.2.nupkg.sha512",
+    "/home/iandzindo/.nuget/packages/microsoft.data.sqlite.core/9.0.0-preview.1.24081.2/microsoft.data.sqlite.core.9.0.0-preview.1.24081.2.nupkg.sha512",
+    "/home/iandzindo/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.7/sqlitepclraw.bundle_e_sqlite3.2.1.7.nupkg.sha512",
+    "/home/iandzindo/.nuget/packages/sqlitepclraw.core/2.1.7/sqlitepclraw.core.2.1.7.nupkg.sha512",
+    "/home/iandzindo/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.7/sqlitepclraw.lib.e_sqlite3.2.1.7.nupkg.sha512",
+    "/home/iandzindo/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.7/sqlitepclraw.provider.e_sqlite3.2.1.7.nupkg.sha512",
+    "/home/iandzindo/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}
