@@ -6,7 +6,11 @@ bool gameRunning = true;
 
 static bool additionGame(Random random)
 {   
-    for (int i = 0; i < 10; i++){
+    Console.WriteLine("How many questions would you like? \n");
+
+    int num = int.Parse(Console.ReadLine());
+
+    for (int i = 0; i < num; i++){
         int n1 = random.Next(100);
         int n2 = random.Next(100);
 
@@ -23,7 +27,11 @@ static bool additionGame(Random random)
 
 static bool subtractionGame(Random random)
 {   
-    for (int i = 0; i < 10; i++){
+    Console.WriteLine("How many questions would you like? \n");
+
+    int num = int.Parse(Console.ReadLine());
+
+    for (int i = 0; i < num; i++){
         int n1 = random.Next(100);
         int n2 = random.Next(100);
 
@@ -32,7 +40,7 @@ static bool subtractionGame(Random random)
         int response = int.Parse(Console.ReadLine());
 
         if (response != n1-n2)
-            Console.WriteLine($"Incorrect response. It was {n1 + n2}. \n You lose. \n");
+            Console.WriteLine($"Incorrect response. It was {n1 + n2}. \n");
     };
 
     return true;
@@ -40,7 +48,11 @@ static bool subtractionGame(Random random)
 
 static bool multiplicationGame(Random random)
 {   
-    for (int i = 0; i < 10; i++){
+    Console.WriteLine("How many questions would you like? \n");
+
+    int num = int.Parse(Console.ReadLine());
+
+    for (int i = 0; i < num; i++){
         int n1 = random.Next(100);
         int n2 = random.Next(100);
 
@@ -50,15 +62,19 @@ static bool multiplicationGame(Random random)
         int response = int.Parse(Console.ReadLine());
 
         if (response != n1*n2)
-            Console.WriteLine($"Incorrect response. It was {n1 + n2}. \n You lose. \n");
+            Console.WriteLine($"Incorrect response. It was {n1 + n2}. \n");
         };
 
     return true;
 }
 
 static bool divisonGame(Random random)
-{
-    for (int i = 0; i < 10; i++){
+{   
+    Console.WriteLine("How many questions would you like? \n");
+
+    int num = int.Parse(Console.ReadLine());
+    
+    for (int i = 0; i < num; i++){
         int n1 = random.Next(100);
         int n2 = random.Next(100);
 
@@ -67,7 +83,7 @@ static bool divisonGame(Random random)
         int response = int.Parse(Console.ReadLine());
 
         if (response != n1/n2)
-            Console.WriteLine($"Incorrect response. It was {n1 + n2}.\n You lose. \n");
+            Console.WriteLine($"Incorrect response. It was {n1 + n2}. \n");
 
     };
 
@@ -88,19 +104,28 @@ while (gameRunning)
     {
         case 1:
             Console.Write("Redirecting to addition game...\n \n");
+            games++;
             additionGame(rnd);
             break;
         case 2:
             Console.Write("Redirecting to subtraction game... \n \n");
+            games++;
             subtractionGame(rnd);
             break;
         case 3:
             Console.Write("Redirecting to multiplication game...\n \n");
+            games++;
             multiplicationGame(rnd);
             break;
         case 4:
             Console.Write("Redirecting to division game...\n \n");
+            games++;
             divisonGame(rnd);
             break;
+        case 5:
+            Console.Write("Or would you like to play a random game? \n");
+            games++;
+            break;
+
     }
 }
